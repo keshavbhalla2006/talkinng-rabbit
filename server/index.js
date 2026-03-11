@@ -11,8 +11,7 @@ const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 
 app.use(cors());
 app.use(express.json({ limit: "5mb" }));
 
-// ── Serve React build in production ──────────────────────────────────────────
-const clientBuild = path.join(__dirname, "../client/dist");
+const clientBuild = path.join(__dirname, "dist");
 if (fs.existsSync(clientBuild)) {
   app.use(express.static(clientBuild));
 }
