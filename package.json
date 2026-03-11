@@ -4,7 +4,7 @@
   "description": "Talking Rabbitt — Conversational AI for Business Data",
   "scripts": {
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
-    "build": "cd client && npm install && npm run build && cp -r dist ../server/",
+    "build": "cd server && npm install && cd ../client && npm install && npm run build && cp -r dist ../server/",
     "start": "cd server && node index.js",
     "dev:server": "cd server && npm run dev",
     "dev:client": "cd client && npm run dev"
